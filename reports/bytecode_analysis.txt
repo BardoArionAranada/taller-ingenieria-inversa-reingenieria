@@ -1,0 +1,212 @@
+﻿Classfile /D:/08_Octavo semestre La Salle/REINGENIER�A DE SOFTWARE/REINIGIENERIA/Taller Ingenier�a inversa para Reingenier�a de software/authentication-system-reverse-engineering/bin/AuthenticationSystem.class
+  Last modified 13 may. 2026; size 1703 bytes
+  SHA-256 checksum b277cdb1dac506171c581c4ccb18d0ae6f8bd61a151c054fdface79d8089adb7
+  Compiled from "AuthenticationSystem.java"
+public class AuthenticationSystem
+  minor version: 0
+  major version: 65
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #61                         // AuthenticationSystem
+  super_class: #2                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 3
+Constant pool:
+    #1 = Methodref          #2.#3         // java/lang/Object."<init>":()V
+    #2 = Class              #4            // java/lang/Object
+    #3 = NameAndType        #5:#6         // "<init>":()V
+    #4 = Utf8               java/lang/Object
+    #5 = Utf8               <init>
+    #6 = Utf8               ()V
+    #7 = Fieldref           #8.#9         // java/lang/System.out:Ljava/io/PrintStream;
+    #8 = Class              #10           // java/lang/System
+    #9 = NameAndType        #11:#12       // out:Ljava/io/PrintStream;
+   #10 = Utf8               java/lang/System
+   #11 = Utf8               out
+   #12 = Utf8               Ljava/io/PrintStream;
+   #13 = String             #14           // === Sistema de Autenticaci�n ===
+   #14 = Utf8               === Sistema de Autenticaci�n ===
+   #15 = Methodref          #16.#17       // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #16 = Class              #18           // java/io/PrintStream
+   #17 = NameAndType        #19:#20       // println:(Ljava/lang/String;)V
+   #18 = Utf8               java/io/PrintStream
+   #19 = Utf8               println
+   #20 = Utf8               (Ljava/lang/String;)V
+   #21 = Class              #22           // User
+   #22 = Utf8               User
+   #23 = String             #24           // admin
+   #24 = Utf8               admin
+   #25 = String             #26           // secret123
+   #26 = Utf8               secret123
+   #27 = Methodref          #21.#28       // User."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+   #28 = NameAndType        #5:#29        // "<init>":(Ljava/lang/String;Ljava/lang/String;)V
+   #29 = Utf8               (Ljava/lang/String;Ljava/lang/String;)V
+   #30 = Class              #31           // Context
+   #31 = Utf8               Context
+   #32 = Methodref          #30.#3        // Context."<init>":()V
+   #33 = Class              #34           // SimpleValidation
+   #34 = Utf8               SimpleValidation
+   #35 = Methodref          #33.#3        // SimpleValidation."<init>":()V
+   #36 = Methodref          #30.#37       // Context.setStrategy:(LValidationStrategy;)V
+   #37 = NameAndType        #38:#39       // setStrategy:(LValidationStrategy;)V
+   #38 = Utf8               setStrategy
+   #39 = Utf8               (LValidationStrategy;)V
+   #40 = Methodref          #30.#41       // Context.executeValidation:(LUser;Ljava/lang/String;)Z
+   #41 = NameAndType        #42:#43       // executeValidation:(LUser;Ljava/lang/String;)Z
+   #42 = Utf8               executeValidation
+   #43 = Utf8               (LUser;Ljava/lang/String;)Z
+   #44 = Class              #45           // StrongValidation
+   #45 = Utf8               StrongValidation
+   #46 = Methodref          #44.#3        // StrongValidation."<init>":()V
+   #47 = String             #48           // Secret123!
+   #48 = Utf8               Secret123!
+   #49 = InvokeDynamic      #0:#50        // #0:makeConcatWithConstants:(Z)Ljava/lang/String;
+   #50 = NameAndType        #51:#52       // makeConcatWithConstants:(Z)Ljava/lang/String;
+   #51 = Utf8               makeConcatWithConstants
+   #52 = Utf8               (Z)Ljava/lang/String;
+   #53 = InvokeDynamic      #1:#50        // #1:makeConcatWithConstants:(Z)Ljava/lang/String;
+   #54 = Class              #55           // ReportGenerator
+   #55 = Utf8               ReportGenerator
+   #56 = Methodref          #54.#3        // ReportGenerator."<init>":()V
+   #57 = Methodref          #54.#58       // ReportGenerator.generateReport:(LUser;)V
+   #58 = NameAndType        #59:#60       // generateReport:(LUser;)V
+   #59 = Utf8               generateReport
+   #60 = Utf8               (LUser;)V
+   #61 = Class              #62           // AuthenticationSystem
+   #62 = Utf8               AuthenticationSystem
+   #63 = Utf8               Code
+   #64 = Utf8               LineNumberTable
+   #65 = Utf8               LocalVariableTable
+   #66 = Utf8               this
+   #67 = Utf8               LAuthenticationSystem;
+   #68 = Utf8               main
+   #69 = Utf8               ([Ljava/lang/String;)V
+   #70 = Utf8               args
+   #71 = Utf8               [Ljava/lang/String;
+   #72 = Utf8               user
+   #73 = Utf8               LUser;
+   #74 = Utf8               context
+   #75 = Utf8               LContext;
+   #76 = Utf8               result1
+   #77 = Utf8               Z
+   #78 = Utf8               result2
+   #79 = Utf8               generator
+   #80 = Utf8               LReportGenerator;
+   #81 = Utf8               SourceFile
+   #82 = Utf8               AuthenticationSystem.java
+   #83 = Utf8               BootstrapMethods
+   #84 = String             #85           // Resultado Simple: \u0001
+   #85 = Utf8               Resultado Simple: \u0001
+   #86 = String             #87           // Resultado Fuerte: \u0001
+   #87 = Utf8               Resultado Fuerte: \u0001
+   #88 = MethodHandle       6:#89         // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #89 = Methodref          #90.#91       // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #90 = Class              #92           // java/lang/invoke/StringConcatFactory
+   #91 = NameAndType        #51:#93       // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #92 = Utf8               java/lang/invoke/StringConcatFactory
+   #93 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+   #94 = Utf8               InnerClasses
+   #95 = Class              #96           // java/lang/invoke/MethodHandles$Lookup
+   #96 = Utf8               java/lang/invoke/MethodHandles$Lookup
+   #97 = Class              #98           // java/lang/invoke/MethodHandles
+   #98 = Utf8               java/lang/invoke/MethodHandles
+   #99 = Utf8               Lookup
+{
+  public AuthenticationSystem();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 2: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   LAuthenticationSystem;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=6, args_size=1
+         0: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         3: ldc           #13                 // String === Sistema de Autenticaci�n ===
+         5: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+         8: new           #21                 // class User
+        11: dup
+        12: ldc           #23                 // String admin
+        14: ldc           #25                 // String secret123
+        16: invokespecial #27                 // Method User."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+        19: astore_1
+        20: new           #30                 // class Context
+        23: dup
+        24: invokespecial #32                 // Method Context."<init>":()V
+        27: astore_2
+        28: aload_2
+        29: new           #33                 // class SimpleValidation
+        32: dup
+        33: invokespecial #35                 // Method SimpleValidation."<init>":()V
+        36: invokevirtual #36                 // Method Context.setStrategy:(LValidationStrategy;)V
+        39: aload_2
+        40: aload_1
+        41: ldc           #25                 // String secret123
+        43: invokevirtual #40                 // Method Context.executeValidation:(LUser;Ljava/lang/String;)Z
+        46: istore_3
+        47: aload_2
+        48: new           #44                 // class StrongValidation
+        51: dup
+        52: invokespecial #46                 // Method StrongValidation."<init>":()V
+        55: invokevirtual #36                 // Method Context.setStrategy:(LValidationStrategy;)V
+        58: aload_2
+        59: aload_1
+        60: ldc           #47                 // String Secret123!
+        62: invokevirtual #40                 // Method Context.executeValidation:(LUser;Ljava/lang/String;)Z
+        65: istore        4
+        67: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        70: iload_3
+        71: invokedynamic #49,  0             // InvokeDynamic #0:makeConcatWithConstants:(Z)Ljava/lang/String;
+        76: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        79: getstatic     #7                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        82: iload         4
+        84: invokedynamic #53,  0             // InvokeDynamic #1:makeConcatWithConstants:(Z)Ljava/lang/String;
+        89: invokevirtual #15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        92: new           #54                 // class ReportGenerator
+        95: dup
+        96: invokespecial #56                 // Method ReportGenerator."<init>":()V
+        99: astore        5
+       101: aload         5
+       103: aload_1
+       104: invokevirtual #57                 // Method ReportGenerator.generateReport:(LUser;)V
+       107: return
+      LineNumberTable:
+        line 4: 0
+        line 7: 8
+        line 10: 20
+        line 13: 28
+        line 14: 39
+        line 16: 47
+        line 17: 58
+        line 19: 67
+        line 20: 79
+        line 23: 92
+        line 24: 101
+        line 25: 107
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     108     0  args   [Ljava/lang/String;
+           20      88     1  user   LUser;
+           28      80     2 context   LContext;
+           47      61     3 result1   Z
+           67      41     4 result2   Z
+          101       7     5 generator   LReportGenerator;
+}
+SourceFile: "AuthenticationSystem.java"
+BootstrapMethods:
+  0: #88 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #84 Resultado Simple: \u0001
+  1: #88 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #86 Resultado Fuerte: \u0001
+InnerClasses:
+  public static final #99= #95 of #97;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
