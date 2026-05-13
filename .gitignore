@@ -1,0 +1,5 @@
+bin/
+*.class
+*.log
+02_herramientas/ghidra/
+02_herramientas/x64dbg/
