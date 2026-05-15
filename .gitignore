@@ -1,5 +1,6 @@
 bin/
 *.class
 *.log
+ghidra_workspace/
 02_herramientas/ghidra/
 02_herramientas/x64dbg/
